@@ -1,0 +1,26 @@
+[
+  {
+    "question": "What is Talentflow?",
+    "answer": "Talentflow is a hiring platform where employers create and manage job openings, and candidates can discover, save, and apply to roles. It includes candidate management with Kanban and List views, assessments, and streamlined applications."
+  },
+  {
+    "question": "How do I create a job on Talentflow?",
+    "answer": "Go to Jobs → Post a Job, fill in the title, location, description, and tags, then publish. Your job appears immediately on the public jobs page and can be reordered in Jobs Admin."
+  },
+  {
+    "question": "How can candidates find and filter jobs?",
+    "answer": "Visit the Jobs page to search by keyword and filter by location or company. Use pagination to browse results and open a job to view details and apply."
+  },
+  {
+    "question": "How do I manage candidates (Kanban vs List)?",
+    "answer": "Open the Candidates page. Switch between Kanban to drag candidates across stages (Applied, Screen, Tech, Offer, Hired) and List for faster in-line updates and searching."
+  },
+  {
+    "question": "How are applications linked to jobs?",
+    "answer": "When a candidate applies from a job detail page, the application is automatically associated with that job. Recruiters can view these from the Candidates page and within the job's details."
+  },
+  {
+    "question": "Can I save jobs to review later?",
+    "answer": "Yes. Click 'Save' on any job card. Access your saved roles from the Saved Jobs page."
+  }
+]

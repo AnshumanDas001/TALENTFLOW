@@ -17,8 +17,19 @@ import {
 } from "@/components/ui/accordion";
 import { Link } from "react-router-dom";
 const LandingPage = () => {
+  // Build logo stream with ENTNT twice (start and middle)
+  const entnt = companies.find((c) => String(c.name).toLowerCase() === "entnt");
+  let logos = companies.slice();
+  if (entnt) {
+    // Ensure ENTNT is first
+    logos = [entnt, ...companies.filter((c, i) => i !== companies.indexOf(entnt))];
+    // Insert ENTNT again in the middle
+    const mid = Math.floor(logos.length / 2);
+    logos.splice(mid + 1, 0, entnt);
+  }
+
   return (
-    <main className="flex flex-col gap-10 sm:gap-20 py-10 sm:py-20">
+    <main className="flex flex-col gap-8 sm:gap-16 py-10 sm:py-20">
       <section className="text-center ">
         <h1 className="flex flex-col items-center justify-center gradient-title font-extrabold text-4xl sm:text-6xl lg:text-8xl tracking-tighter py-4 text-center">
           <span className="block">Hire Smarter. Move Faster.</span>
@@ -28,14 +39,14 @@ const LandingPage = () => {
           An HR platform for job boards, kanban-style candidate tracking, and interactive assessments.
         </p>
       </section>
-      <div className="flex gap-6 justify-center">
+      <div className="flex flex-col sm:flex-row gap-3 sm:gap-6 justify-center px-4">
         <Link to={"/jobs"}>
-          <Button variant="blue" size="xl">
+          <Button variant="blue" size="xl" className="w-full sm:w-auto">
             Find Jobs
           </Button>
         </Link>
         <Link to={"/jobs/create"}>
-          <Button variant="destructive" size="xl">
+          <Button variant="destructive" size="xl" className="w-full sm:w-auto">
             Post a Job
           </Button>
         </Link>
@@ -46,18 +57,18 @@ const LandingPage = () => {
             delay: 2000,
           }),
         ]}
-        className="w-full py-10"
+        className="w-full py-6 sm:py-10"
       >
-        <CarouselContent className="flex gap-5 sm:gap-20 items-center">
-          {companies.map(({ name, id, path }) => (
-            <CarouselItem key={id} className="basis-1/3 lg:basis-1/6 ">
+        <CarouselContent className="flex gap-4 sm:gap-12 items-center">
+          {logos.map(({ name, id, path }, idx) => (
+            <CarouselItem key={`${id}-${idx}`} className="basis-1/2 sm:basis-1/3 lg:basis-1/6 ">
               {String(name).toLowerCase() === "entnt" ? (
-                <div className="flex items-center gap-3">
-                  <span className="text-sm sm:text-base font-semibold opacity-90">ENTNT</span>
-                  <img src={path} alt={name} className="h-12 sm:h-16 object-contain" />
+                <div className="flex items-center gap-2 sm:gap-3 justify-center">
+                  <span className="text-xs sm:text-sm font-semibold opacity-90">ENTNT</span>
+                  <img src={path} alt={name} className="h-10 sm:h-12 lg:h-16 object-contain" />
                 </div>
               ) : (
-                <img src={path} alt={name} className="h-9 sm:h-14 object-contain mx-auto" />
+                <img src={path} alt={name} className="h-8 sm:h-12 lg:h-14 object-contain mx-auto" />
               )}
             </CarouselItem>
           ))}
@@ -65,7 +76,7 @@ const LandingPage = () => {
       </Carousel>
 
       {/* Feature hero: image left, animated bullets right */}
-      <section className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+      <section className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 items-center px-4">
         <div className="rounded-2xl overflow-hidden shadow-lg shadow-black/20">
           <motion.img
             src="/Talentflow.png"
@@ -78,7 +89,7 @@ const LandingPage = () => {
           />
         </div>
         <div>
-          <h2 className="text-3xl lg:text-4xl font-bold">Why Talentflow?</h2>
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold">Why Talentflow?</h2>
           <ul className="mt-4 space-y-4">
             {[
               "Create and post jobs in minutes with a clean form and instant publishing.",
@@ -93,7 +104,7 @@ const LandingPage = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.35, delay: 0.1 * i, ease: "easeOut" }}
                 viewport={{ once: true, amount: 0.4 }}
-                className="flex items-start gap-3 text-base lg:text-lg"
+                className="flex items-start gap-3 text-sm sm:text-base lg:text-lg"
               >
                 <span className="mt-[7px] inline-block h-2.5 w-2.5 rounded-full bg-blue-400 shrink-0" />
                 <span className="opacity-90">{text}</span>
@@ -103,7 +114,7 @@ const LandingPage = () => {
         </div>
       </section>
 
-      <section id="instructions" className="grid grid-cols-1 md:grid-cols-3 gap-6 place-items-stretch">
+      <section id="instructions" className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 place-items-stretch px-4">
         {/* 1. How to create and find jobs */}
         <CardSpotlightDemo>
           {/* Override content when children passed */}

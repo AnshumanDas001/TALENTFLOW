@@ -10,8 +10,10 @@ import { makeServer } from "./mocks/server";
 // Import your publishable key
 const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY;
 
-if (import.meta.env.DEV) {
-  makeServer();
+// Enable Mirage in development, and optionally in production via flag
+const ENABLE_MOCKS = import.meta.env.VITE_ENABLE_MOCKS === "true";
+if (import.meta.env.DEV || ENABLE_MOCKS) {
+  makeServer({ environment: import.meta.env.DEV ? "development" : "production" });
 }
 
 ReactDOM.createRoot(document.getElementById("root")).render(

@@ -29,7 +29,7 @@ const AppLayout = ({ authEnabled = true }) => {
   return (
     <div>
       <div className="grid-background"></div>
-      <main className="min-h-screen container scroll-smooth">
+      <main className="min-h-screen container scroll-smooth px-3 sm:px-0">
         <Header authEnabled={authEnabled} />
         <AnimatePresence mode="wait">
           <motion.div
@@ -43,7 +43,7 @@ const AppLayout = ({ authEnabled = true }) => {
           </motion.div>
         </AnimatePresence>
       </main>
-      <div className="p-10 text-center bg-gray-800 mt-10">
+      <div className="p-6 sm:p-10 text-center bg-gray-800 mt-10">
         Made with ❤️ by Anshuman
       </div>
     </div>

@@ -3,7 +3,11 @@
   publish = "dist"
 
 [build.environment]
+<<<<<<< HEAD
   NODE_VERSION = "18"
+=======
+  NODE_VERSION = "20"
+>>>>>>> b4acbe2 (chore(netlify): use Node 20 for build compatibility)
 
 # SPA fallback so React Router works on refresh and deep links
 [[redirects]]

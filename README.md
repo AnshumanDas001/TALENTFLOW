@@ -109,9 +109,20 @@ Once the application is running, explore the following key routes:
 ## 🖼 Screenshots
 
 * **Landing Page**
+<img width="959" height="474" alt="image" src="https://github.com/user-attachments/assets/b6ec01c8-8d43-41b9-a012-84ccb25be83a" />
+<img width="947" height="467" alt="image" src="https://github.com/user-attachments/assets/bd01d9fd-78ea-4fa2-97db-022bf4534612" />
+<img width="945" height="455" alt="image" src="https://github.com/user-attachments/assets/99009016-8440-4a5b-ab26-2213c5ec4979" />
 
 * **Jobs Board**
+<img width="949" height="467" alt="image" src="https://github.com/user-attachments/assets/3e74e29b-dc40-4568-8f1c-0f421975f372" />
+<img width="914" height="464" alt="image" src="https://github.com/user-attachments/assets/b13d0e18-87da-4ae7-a8b3-e6c8890f8e01" />
 
-* **Candidates (Kanban View)**
+* **Candidates (Kanban/List View)**
+<img width="932" height="477" alt="image" src="https://github.com/user-attachments/assets/9c3d4789-568d-4860-9c6c-edfac2b24df1" />
+<img width="947" height="458" alt="image" src="https://github.com/user-attachments/assets/0b9513b1-8f16-41c6-8c24-ce02f1520772" />
 
 * **Assessment Builder**
+ <img width="947" height="458" alt="image" src="https://github.com/user-attachments/assets/507ed113-d67f-43a3-9ce3-d0ee33da959f" />
+ <img width="948" height="454" alt="image" src="https://github.com/user-attachments/assets/64d17a47-6dbf-4f50-855c-b78fa7e7dcd5" />
+
+
